@@ -1,0 +1,25 @@
+<h1>{{ title }}</h1>
+<ul>
+  <ng-container *ngFor="let item of anuglarConcepts; let i = index">
+    <li *ngIf="i % 2 == 0">{{ item }}</li>
+  </ng-container>
+  <!-- <li *ngFor="let item of anuglarConcepts; let i = index">
+    {{ i }} - {{ item }}
+  </li> -->
+</ul>
+<h3>{{ description }}</h3>
+<ol>
+  <li *ngFor="let item of polaznici">
+    {{ item }}
+  </li>
+</ol>
+
+<div *ngIf="anuglarConcepts.length > 0">
+  <p>This is ngIf test</p>
+</div>
+
+<div [ngSwitch]="anuglarConcepts.length">
+  <p *ngSwitchCase="0">There are no angualar concepts</p>
+  <p *ngSwitchCase="1">There is one angular concept</p>
+  <p *ngSwitchDefault="">There are many angular concepts</p>
+</div>
