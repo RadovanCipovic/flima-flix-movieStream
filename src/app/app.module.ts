@@ -8,7 +8,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./components/app/app.component";
 import { HelpersModule } from "./components/helpers/helpers.module";
 import { PagesModule } from "./components/pages/pages.module";
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, withFetch } from "@angular/common/http";
+import { provideHttpClient } from "@angular/common/http";
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,7 @@ import { HttpClientModule } from "@angular/common/http";
     PagesModule,
     HttpClientModule,
   ],
-  providers: [provideClientHydration()],
+  providers: [provideClientHydration(), provideHttpClient(withFetch())],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
