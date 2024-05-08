@@ -1,1 +1,38 @@
-<p>hotels works!</p>
+<h3>HOTELS</h3>
+<table class="table table-striped">
+  <tbody>
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Description</td>
+      <td>Year of start</td>
+      <td>Number of stars</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr *ngFor="let hotel of hotels">
+      <td>{{ hotel.id }}</td>
+      <td>{{ hotel.name }}</td>
+      <td>{{ hotel.description }}</td>
+      <td>{{ hotel.yearOfStart }}</td>
+      <td>{{ hotel.noOfStars }}</td>
+    </tr>
+  </tbody>
+</table>
+<!-- <div *ngFor="let hotel of hotels">
+  <div
+    class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
+  >
+    <div class="my-3 p-3">
+      <h2 class="display-5">{{ hotel.id }}</h2>
+      <p class="lead">{{ hotel.name }}</p>
+      <p class="lead">{{ hotel.description }}</p>
+      <p class="lead">{{ hotel.yearOfStart }}</p>
+      <p class="lead">{{ hotel.noOfStars }}</p>
+    </div>
+    <div
+      class="bg-body shadow-sm mx-auto"
+      style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
+    ></div>
+  </div>
+</div> -->
