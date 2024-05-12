@@ -18,6 +18,7 @@ export class ViewHotelComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((paramsData) => {
       let hotelID: number = paramsData[`id`];
+
       this.hotelService.getHotelByID(hotelID).subscribe((data) => {
         this.hotel = data;
       });

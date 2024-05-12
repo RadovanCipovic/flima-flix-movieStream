@@ -4,6 +4,7 @@ export class Hotel {
   description: string;
   yearOfStart: number;
   noOfStars: number;
+  imagePath: string;
   update: Date;
   created: Date;
 }

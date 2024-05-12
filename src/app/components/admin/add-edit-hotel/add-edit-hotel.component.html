@@ -1,0 +1,33 @@
+<h3>Add hotel</h3>
+
+<div class="form-group">
+  <label for="">Name:</label>
+  <input type="text" class="form-control" [(ngModel)]="hotel.name" />
+  <div class="form-group">
+    <label for="">Description:</label>
+    <textarea
+      type="text"
+      class="form-control"
+      [(ngModel)]="hotel.description"
+    ></textarea>
+  </div>
+  <div class="form-group">
+    <label for="">No. of strars</label>
+    <select class="form-control" [(ngModel)]="hotel.noOfStars">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="">Year of start:</label>
+    <input type="number" class="form-control" [(ngModel)]="hotel.yearOfStart" />
+  </div>
+  <div class="form-group">
+    <label>Upload file:</label>
+    <input type="file" (change)="setUploadedFile($event)" />
+  </div>
+  <button class="btn btn-primary" (click)="saveHotel()">Save</button>
+</div>

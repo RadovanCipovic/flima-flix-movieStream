@@ -1,7 +1,7 @@
 <div class="card shadow-sm">
   <img
     class="object-fit-sm-cover object-fit-md-cover"
-    src="https://images.unsplash.com/photo-1600011689032-8b628b8a8747?q=80&w=3348&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    src="http://localhost:3000/{{ hotel.imagePath }}"
     alt=""
   />
   <div class="card-body">
@@ -14,9 +14,23 @@
         <button
           routerLink="/view-hotel/{{ hotel.id }}"
           type="button"
-          class="btn btn-sm btn-outline-secondary"
+          class="btn btn-sm btn-outline-primary px-3"
         >
           View details
+        </button>
+        <button
+          routerLink="/admin/edit-hotel/{{ hotel.id }}"
+          type="button"
+          class="btn btn-sm btn-outline-success px-3"
+        >
+          Edit
+        </button>
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-danger px-3"
+          (click)="deleteHotel()"
+        >
+          Delete
         </button>
       </div>
     </div>

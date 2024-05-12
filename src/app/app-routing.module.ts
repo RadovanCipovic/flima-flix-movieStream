@@ -7,10 +7,16 @@ import { HotelsComponent } from "./components/pages/hotels/hotels.component";
 const routes: Routes = [
   {
     path: "",
-    loadChildren: () => {
-      return import("./components/pages/pages.module").then(
-        (pm) => pm.PagesModule
-      );
+    loadChildren: async () => {
+      const pm = await import("./components/pages/pages.module");
+      return pm.PagesModule;
+    },
+  },
+  {
+    path: "admin",
+    loadChildren: async () => {
+      const am = await import("./components/admin/admin.module");
+      return am.AdminModule;
     },
   },
 ];

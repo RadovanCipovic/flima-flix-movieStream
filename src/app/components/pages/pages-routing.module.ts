@@ -4,6 +4,7 @@ import { HomeComponent } from "./home/home.component";
 import { ContactUsComponent } from "./contact-us/contact-us.component";
 import { HotelsComponent } from "./hotels/hotels.component";
 import { ViewHotelComponent } from "./view-hotel/view-hotel.component";
+import { AddEditHotelComponent } from "../admin/add-edit-hotel/add-edit-hotel.component";
 
 const routes: Routes = [
   {
