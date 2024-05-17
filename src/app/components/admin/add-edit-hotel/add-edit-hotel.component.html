@@ -31,3 +31,8 @@
   </div>
   <button class="btn btn-primary" (click)="saveHotel()">Save</button>
 </div>
+
+<div class="row" *ngIf="edit">
+  <label for="">Current photo:</label>
+  <img src="http://localhost:3000/{{ hotel.imagePath }}" alt="" />
+</div>

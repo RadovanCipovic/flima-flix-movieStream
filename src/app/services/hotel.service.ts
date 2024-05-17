@@ -30,6 +30,6 @@ export class HotelService {
   }
 
   uploadImage(formData: FormData) {
-    return this.http.post("http://localhost:3000/upload", formData);
+    return this.http.post("http://localhost:3000/public", formData);
   }
 }

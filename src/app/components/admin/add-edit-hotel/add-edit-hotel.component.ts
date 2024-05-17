@@ -12,7 +12,7 @@ import { log } from "console";
 export class AddEditHotelComponent implements OnInit {
   hotel: Hotel = new Hotel();
   edit: boolean = false;
-  fileToUpload: any;
+  fileToUpload: any = null;
 
   constructor(
     private hotelService: HotelService,
@@ -42,6 +42,19 @@ export class AddEditHotelComponent implements OnInit {
 
   saveHotel() {
     if (this.edit) {
+      if (this.fileToUpload) {
+        //ako fajl postoji
+        let formData: FormData = new FormData();
+        formData.append("img", this.fileToUpload);
+        this.hotelService
+          .uploadImage(formData)
+          .subscribe((fileUploadResponse: any) => {
+            this.hotel.imagePath = fileUploadResponse.filename;
+            this.hotelService.updateHotel(this.hotel).subscribe((data) => {
+              this.router.navigateByUrl("/hotels");
+            });
+          });
+      }
       this.hotelService.updateHotel(this.hotel).subscribe((data) => {
         this.router.navigateByUrl("/hotels");
       });
