@@ -1,38 +1,41 @@
-<div class="card shadow-sm">
+<div class="card shadow-sm custom-card">
   <img
-    class="object-fit-sm-cover object-fit-md-cover"
+    style="height: 250px"
+    class="object-fit-cover p-2"
     src="http://localhost:3000/{{ hotel.imagePath }}"
-    alt=""
+    alt="Hotel slika"
   />
-  <div class="card-body">
-    <div>
-      <p class="card-text">{{ hotel.name }}</p>
+  <div class="card-body d-flex flex-column p-3 overflow-hidden">
+    <div class="mb-2 overflow-hidden">
+      <p class="card-text text-truncate mb-1">
+        <strong>
+          {{ hotel.name }}
+        </strong>
+      </p>
       <small>{{ hotel.description }}</small>
     </div>
-    <div class="d-flex justify-content-between align-items-center">
-      <div class="btn-group">
-        <button
-          routerLink="/view-hotel/{{ hotel.id }}"
-          type="button"
-          class="btn btn-sm btn-outline-primary px-3"
-        >
-          View details
-        </button>
-        <button
-          routerLink="/admin/edit-hotel/{{ hotel.id }}"
-          type="button"
-          class="btn btn-sm btn-outline-success px-3"
-        >
-          Edit
-        </button>
-        <button
-          type="button"
-          class="btn btn-sm btn-outline-danger px-3"
-          (click)="deleteHotel()"
-        >
-          Delete
-        </button>
-      </div>
+    <div class="btn-group mt-auto d-flex justify-content-left">
+      <button
+        routerLink="/view-hotel/{{ hotel.id }}"
+        type="button"
+        class="btn btn-sm btn-outline-primary"
+      >
+        View details
+      </button>
+      <button
+        routerLink="/admin/edit-hotel/{{ hotel.id }}"
+        type="button"
+        class="btn btn-sm btn-outline-success"
+      >
+        Edit
+      </button>
+      <button
+        type="button"
+        class="btn btn-sm btn-outline-danger"
+        (click)="deleteHotel()"
+      >
+        Delete
+      </button>
     </div>
   </div>
 </div>

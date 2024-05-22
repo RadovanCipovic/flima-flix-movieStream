@@ -1,4 +1,17 @@
-<h3>Add hotel</h3>
+<h3 class="d-flex justify-content-center pt-5">
+  {{ edit ? "Eidit" : "Add" }} Hotel
+</h3>
+
+<div class="row" *ngIf="edit">
+  <label class="d-flex justify-content-center" for="">Current photo:</label>
+  <div class="d-flex justify-content-center">
+    <img
+      src="http://localhost:3000/{{ hotel.imagePath }}"
+      style="width: 300px"
+      alt=""
+    />
+  </div>
+</div>
 
 <div class="form-group">
   <label for="">Name:</label>
@@ -30,9 +43,4 @@
     <input type="file" (change)="setUploadedFile($event)" />
   </div>
   <button class="btn btn-primary" (click)="saveHotel()">Save</button>
-</div>
-
-<div class="row" *ngIf="edit">
-  <label for="">Current photo:</label>
-  <img src="http://localhost:3000/{{ hotel.imagePath }}" alt="" />
 </div>

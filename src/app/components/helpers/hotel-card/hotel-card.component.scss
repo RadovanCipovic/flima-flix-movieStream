@@ -1,0 +1,86 @@
+// .custom-card {
+//   width: 400px;
+//   height: 500px;
+//   overflow: hidden;
+//   display: flex;
+//   flex-direction: column;
+
+//   .custom-img {
+//     height: 350px; // Adjust the height of the image as needed
+//     object-fit: cover;
+//   }
+
+//   .card-body {
+//     display: flex;
+//     flex-direction: column;
+//     flex: 1;
+//     overflow: hidden;
+
+//     .card-text,
+//     small {
+//       white-space: nowrap;
+//       overflow: hidden;
+//       text-overflow: ellipsis;
+//     }
+//   }
+
+//   .mt-auto {
+//     margin-top: auto;
+//   }
+
+//   .btn {
+//     flex: 1;
+//     min-width: 0;
+//   }
+// }
+// // Za mobilne
+// @media (max-width: 576px) {
+//   .custom-card {
+//     width: 100%; // Full width on mobile devices
+//     height: auto; // Automatic height to fit content
+
+//     .custom-img {
+//       height: auto; // Automatic height to fit content
+//       max-height: 150px; // Limit the height of the image
+//     }
+
+//     .card-body {
+//       .card-text,
+//       small {
+//         white-space: normal; // Allow text to wrap
+//         overflow: visible; // Allow text to be fully visible
+//       }
+//     }
+
+//     .btn {
+//       flex: none; // Reset flex properties
+//       width: 30%; // Full width buttons on mobile
+//       margin-bottom: 5px; // Space between buttons
+//     }
+//   }
+// }
+// .card-body {
+//       display: flex;
+//       flex-direction: column;
+//       flex: 1;
+//       overflow: hidden;
+
+//   .card-text,
+//       small {
+//         white-space: nowrap;
+//         overflow: hidden;
+//         text-overflow: ellipsis;
+// }
+
+// .custom-card {
+//   height: 450px;
+//   // overflow: hidden;
+//   // img {
+//   //   // padding: 10px;
+//   //   // height: 250px;
+//   // }
+// }
+
+.custom-card {
+  height: 450px;
+}
