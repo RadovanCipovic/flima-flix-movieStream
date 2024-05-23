@@ -5,11 +5,7 @@
 <div class="row" *ngIf="edit">
   <label class="d-flex justify-content-center" for="">Current photo:</label>
   <div class="d-flex justify-content-center">
-    <img
-      src="http://localhost:3000/{{ hotel.imagePath }}"
-      style="width: 300px"
-      alt=""
-    />
+    <img src="{{ apiUrl }}/{{ hotel.imagePath }}" style="width: 300px" alt="" />
   </div>
 </div>
 

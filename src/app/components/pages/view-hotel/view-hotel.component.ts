@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Hotel } from "../../../models/Hotels";
 import { HotelService } from "../../../services/hotel.service";
 import { ActivatedRoute } from "@angular/router";
+import { environment } from "../../../../environments/environment.development";
 
 @Component({
   selector: "app-view-hotel",
@@ -10,6 +11,7 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class ViewHotelComponent implements OnInit {
   hotel: Hotel = new Hotel();
+  apiUrl = environment.API_URL;
 
   constructor(
     private hotelService: HotelService,

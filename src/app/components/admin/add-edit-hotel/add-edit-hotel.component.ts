@@ -3,6 +3,7 @@ import { HotelService } from "../../../services/hotel.service";
 import { Hotel } from "../../../models/Hotels";
 import { ActivatedRoute, Router } from "@angular/router";
 import { log } from "console";
+import { environment } from "../../../../environments/environment.development";
 
 @Component({
   selector: "app-add-edit-hotel",
@@ -12,7 +13,8 @@ import { log } from "console";
 export class AddEditHotelComponent implements OnInit {
   hotel: Hotel = new Hotel();
   edit: boolean = false;
-  fileToUpload: any = null;
+  fileToUpload: File | null = null;
+  apiUrl = environment.API_URL;
 
   constructor(
     private hotelService: HotelService,
@@ -31,14 +33,6 @@ export class AddEditHotelComponent implements OnInit {
       }
     });
   }
-
-  // saveHotel() {
-  //   this.hotelService.insertHotel(this.hotel).subscribe((data) => {
-  //     console.log(data);
-
-  //     this.router.navigateByUrl("/hotels");
-  //   });
-  // }
 
   saveHotel() {
     if (this.edit) {
