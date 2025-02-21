@@ -1,27 +1,24 @@
-# HotelsFrontend
+# FlimaFlix - Online Streaming Platform
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+## Description
+FlimaFlix is an online streaming platform developed as my first course project. The platform allows users to watch movies online and includes features such as user and super admin registration, movie management, and more. This project helped me grasp some foundational concepts in the world of programming, and while it's not perfect, it was a significant learning experience.
 
-## Development server
+## Features
+- **User Registration**: Secure user registration using JWT tokens.
+- **Super Admin Panel**: CRUD operations for movies including adding, editing, listing, and deleting movies. These options are only accessible by the super admin.
+- **Movie Streaming**: Users can stream movies directly on the platform.
+- **Responsive Design**: The application is built with Bootstrap to ensure a responsive and user-friendly interface.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Technologies
+- **Frontend**: Angular, TypeScript, Bootstrap, HTML, CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MySQL
+- **Authentication**: JWT (JSON Web Tokens)
 
-## Code scaffolding
+## Experience and Challenges
+This project, being my first course project, was an incredible learning journey. I initially planned to create an application for hotels, which is why some file names may still reference "hotel" (e.g., `hotel.component.ts`). However, I pivoted to create a movie streaming platform instead. This project is not without its flaws, but it allowed me to understand and implement several key concepts in programming and web development. It taught me the importance of planning, adaptability, and perseverance.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Author
+- **Name**: Radovan Cipovic
+- **Email**: radovancipovic@gmail.com
+- **GitHub**: [RadovanCipovic](https://github.com/RadovanCipovic)
